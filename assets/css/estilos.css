@@ -176,8 +176,15 @@ p {
     width: 200px;
     height: 120px;
     object-fit: cover;
-
+    filter: grayscale(100%);
+    transition: width 0,5s;
 }
+
+.item img:hover {
+    width: 220px;
+    filter: none;
+}
+
 .categories-title2 {
     font-size: 24px;
     font-weight: bold;
