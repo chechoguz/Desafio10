@@ -67,8 +67,15 @@ menu{
     padding: 10px;
     display:none;
     }
-menu p {
-        text-align: center;
+menu a {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: var(--white);
+    padding: 10px;
+    padding-left: 50px;
+    font-size: 15px; 
+    font-weight: bold;
     }
 
 
@@ -89,10 +96,45 @@ main{
     justify-content:space-between;
 }
 
+.title {
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
 .navbar i {
     padding: 0 10px 0 0;
 }
 
+.menu-icon {
+    cursor: pointer;
+}
+
+.side-menu {
+    height: 30%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--azul-marino);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px; /* Espacio en la parte superior */
+    padding-right: 0px;
+}
+
+.side-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--white);
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    color:var(--white);
+}
 
 .categories-title {
     font-size: 24px;
@@ -184,7 +226,7 @@ p {
 
 .paginas .page-link.active {
     background-color: #007bff; /* Fondo azul para la página activa */
-    color: white; /* Texto blanco para la página activa */
+    color: var(--white); /* Texto blanco para la página activa */
     border-color: #007bff; /* Borde del mismo color que el fondo */
 }
 
@@ -205,6 +247,14 @@ footer{
     font-size: 15px;
     padding-bottom: 20px; 
     
+    }
+    .fa-facebook {
+        color: var(--white); /* Color de Facebook */
+        font-size: 24px; /* Tamaño del ícono */
+    }
+    .fa-instagram {
+        color: var(--white); /* Color de Facebook */
+        font-size: 24px; /* Tamaño del ícono */
     }
 
     @media (min-width: 576px) {
@@ -230,9 +280,12 @@ footer{
             display: block;
           }
 
-        .rayitas{
+        .menu-icon{
             display: none;
           }  
+        .side-menu{
+            display: none;
+          }
 
         .container {
             grid-template-columns: repeat(4,1fr);
